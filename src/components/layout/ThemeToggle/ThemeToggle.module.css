@@ -1,0 +1,127 @@
+.toggle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+}
+
+.sun,
+.moon {
+  grid-area: 1 / 1;
+  transition:
+    opacity 0.4s var(--ease-out),
+    transform 0.6s var(--ease-out-expo);
+}
+
+.sun path,
+.sun circle,
+.moon path {
+  transform-origin: 8px 8px;
+}
+
+.moon {
+  opacity: 0;
+  transform: rotate(-60deg) scale(0.6);
+}
+
+.toggle[data-mode="dark"] .sun {
+  opacity: 0;
+  transform: rotate(60deg) scale(0.6);
+}
+
+.toggle[data-mode="dark"] .moon {
+  opacity: 1;
+  transform: none;
+}
+
+.star {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  opacity: 0;
+  transform: scale(0.2);
+}
+
+.toggle:not([data-mode="dark"]):is(:hover, :focus-visible) .sun path {
+  animation: sunshine 1.2s var(--ease-out-expo) both;
+}
+
+.toggle:not([data-mode="dark"]):is(:hover, :focus-visible) .sun circle {
+  animation: glow 1.2s ease-in-out both;
+}
+
+.toggle[data-mode="dark"]:is(:hover, :focus-visible) .moon path {
+  animation: moonrise 1.1s var(--ease-out-expo) both;
+}
+
+.toggle[data-mode="dark"]:is(:hover, :focus-visible) .star {
+  animation: twinkle 1.1s ease-in-out both;
+}
+
+@keyframes sunshine {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  45% {
+    transform: rotate(150deg) scale(1.16);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes moonrise {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  40% {
+    transform: rotate(-22deg);
+  }
+  72% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.2) rotate(0);
+  }
+  45%,
+  65% {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sun,
+  .moon {
+    transition: none;
+  }
+
+  .toggle .sun path,
+  .toggle .sun circle,
+  .toggle .moon path,
+  .toggle .star {
+    animation: none;
+  }
+}

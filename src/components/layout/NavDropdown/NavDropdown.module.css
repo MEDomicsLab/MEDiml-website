@@ -1,0 +1,130 @@
+.menu {
+  font-weight: 400;
+  position: absolute;
+  top: calc(var(--nav-top) + var(--nav-height));
+  left: var(--menu-x, 0px);
+  z-index: 2;
+  width: min(608px, calc(100vw - 2 * var(--nav-inset)));
+  padding-top: 12px;
+  opacity: 0;
+  visibility: hidden;
+  clip-path: inset(0 50% 100% 50% round var(--radius));
+  pointer-events: none;
+  transition:
+    opacity 0.8s var(--ease-menu),
+    clip-path 0.8s var(--ease-menu),
+    visibility 0s linear 0.8s;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  clip-path: inset(0 0 0 0 round var(--radius-lg));
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+.inner {
+  display: grid;
+  gap: 28px;
+  padding: 26px;
+  border-radius: var(--radius);
+  background: var(--color-nav);
+  box-shadow: 0 24px 60px -18px var(--color-nav-shadow);
+}
+
+.withPreview {
+  grid-template-columns: 1fr 1fr;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+}
+
+.title {
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.description {
+  font-size: 15px;
+  color: var(--color-muted);
+}
+
+.links {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.link {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: var(--radius);
+  transition: background-color 0.25s ease;
+}
+
+.link:is(:hover, :focus-visible, [data-active]) {
+  background: var(--color-highlight);
+}
+
+.previews {
+  display: grid;
+  padding-left: 26px;
+  border-left: 1px solid var(--color-line);
+}
+
+.preview {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s var(--ease-menu),
+    visibility 0s linear 0.4s;
+}
+
+.previewActive {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.icon {
+  color: var(--color-scribble);
+  margin: 4px 0 16px;
+}
+
+.preview h3 {
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.preview p {
+  font-size: 15px;
+  color: var(--color-muted);
+}
+
+@media (max-width: 1099px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu,
+  .preview {
+    transition: none;
+  }
+}

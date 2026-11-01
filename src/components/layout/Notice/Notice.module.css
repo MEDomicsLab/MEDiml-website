@@ -1,0 +1,101 @@
+.notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 100%;
+  padding: 0 44px var(--nav-radius) 18px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 12px;
+  row-gap: 2px;
+  min-width: 0;
+  text-align: center;
+}
+
+.text strong {
+  font-weight: 600;
+  color: var(--color-on-accent);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.8;
+  flex-shrink: 0;
+  animation: pulse 2.4s var(--ease-in-out) infinite;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.dismiss {
+  position: absolute;
+  right: 8px;
+  top: calc((100% - var(--nav-radius)) / 2);
+  translate: 0 -50%;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.dismiss svg {
+  transition: rotate 0.65s var(--ease-menu);
+}
+
+.dismiss:is(:hover, :focus-visible) {
+  opacity: 1;
+}
+
+.dismiss:is(:hover, :focus-visible) svg {
+  rotate: 360deg;
+}
+
+@media (max-width: 767px) {
+  .dot {
+    display: none;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@media (min-width: 768px) {
+  .notice {
+    font-size: 12.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    animation: none;
+  }
+
+  .dismiss svg,
+  .dismiss:is(:hover, :focus-visible) svg {
+    rotate: none;
+  }
+}
