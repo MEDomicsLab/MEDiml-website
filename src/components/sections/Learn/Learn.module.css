@@ -1,0 +1,37 @@
+.tracks {
+  display: grid;
+  gap: 72px;
+}
+
+.track {
+  display: grid;
+  align-content: start;
+  gap: 22px;
+  min-width: 0;
+}
+
+.text {
+  max-width: 48ch;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+.video {
+  margin-top: 6px;
+}
+
+.action {
+  display: flex;
+}
+
+.rows {
+  margin-top: 6px;
+}
+
+@media (min-width: 1012px) {
+  .tracks {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(48px, 6vw, 112px);
+  }
+}

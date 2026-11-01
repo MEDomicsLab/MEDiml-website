@@ -1,0 +1,135 @@
+.board {
+  position: relative;
+}
+
+.words {
+  display: grid;
+  gap: 28px;
+}
+
+.word {
+  display: block;
+  text-align: left;
+  font-size: clamp(30px, 7vw, 44px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: var(--color-ink);
+}
+
+.label {
+  position: relative;
+  display: inline-block;
+}
+
+.inline {
+  max-width: 40ch;
+  margin-top: 10px;
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--color-muted);
+}
+
+.details,
+.ink {
+  display: none;
+}
+
+@media (min-width: 1012px) and (min-height: 700px) and (prefers-reduced-motion: no-preference) {
+  .scroller[data-scroll] {
+    height: calc(100svh + var(--count) * 100svh);
+  }
+
+  .scroller[data-scroll] .sticky {
+    position: sticky;
+    top: 0;
+    display: grid;
+    align-content: center;
+    min-height: 100svh;
+    padding-block: 6svh;
+  }
+
+  .board {
+    display: grid;
+    grid-template-columns: minmax(0, 11fr) minmax(0, 11fr);
+    align-items: start;
+    padding-left: calc(100% / 12);
+  }
+
+  .words {
+    display: block;
+  }
+
+  .word {
+    display: inline-block;
+    font-size: clamp(34px, 3.4vw, 58px);
+    opacity: 0.55;
+    transition: opacity 0.6s ease-out;
+  }
+
+  .word:hover,
+  .word[data-active] {
+    opacity: 1;
+  }
+
+  .inline {
+    display: none;
+  }
+
+  .details {
+    display: grid;
+  }
+
+  .detail {
+    grid-area: 1 / 1;
+    max-width: 13em;
+    font-size: clamp(24px, 2.75vw, 46px);
+    line-height: 1.13;
+    letter-spacing: -0.03em;
+    color: var(--color-ink);
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+  }
+
+  .detail[data-active] {
+    opacity: 1;
+  }
+
+  .ink {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+  }
+}
+
+.stroke {
+  fill: none;
+  stroke: var(--color-stroke);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: 1;
+  opacity: 0;
+  transition:
+    stroke-dashoffset 0.5s var(--ease-in-out),
+    opacity 0.6s ease-out;
+}
+
+.board[data-drawn] .strokeOn {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  transition:
+    stroke-dashoffset 1.15s var(--ease-in-out) 0.05s,
+    opacity 0.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stroke,
+  .detail,
+  .word {
+    transition: none !important;
+  }
+}
