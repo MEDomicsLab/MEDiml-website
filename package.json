@@ -1,0 +1,69 @@
+{
+  "name": "medxxx-website",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/build.mjs",
+    "preview": "vite preview",
+    "check": "node scripts/check.mjs",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "assets": "node scripts/assets.mjs",
+    "update-ui": "node scripts/update-ui.mjs"
+  },
+  "template": {
+    "repository": "https://github.com/MEDomicsLab/MEDxxx-Website.git",
+    "ui": [
+      ".gitignore",
+      ".prettierignore",
+      ".prettierrc.json",
+      "eslint.config.js",
+      "index.html",
+      "package.json",
+      "package-lock.json",
+      "vite.config.js",
+      "scripts",
+      "src/App.jsx",
+      "src/main.jsx",
+      "src/entry-server.jsx",
+      "src/components",
+      "src/lib",
+      "src/pages",
+      "src/styles",
+      "src/data/_shared",
+      "assets/textures",
+      "public/fonts",
+      "public/textures"
+    ]
+  },
+  "dependencies": {
+    "gsap": "3.14.2",
+    "lenis": "1.3.17",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.30.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@vitejs/plugin-react": "4.7.0",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "eslint": "9.39.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^15.15.0",
+    "prettier": "3.8.1",
+    "sharp": "^0.34.5",
+    "vite": "5.4.21"
+  }
+}

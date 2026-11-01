@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-ssr
+.vercel
+.env*.local
+*.log
+.DS_Store
+
+.idea/
+.vscode/
+vite.config.js.timestamp-*
