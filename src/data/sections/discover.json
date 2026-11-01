@@ -1,0 +1,29 @@
+{
+  "$schema": "../_shared/schemas/sections/discover.schema.json",
+  "id": "discover",
+  "title": "Lorem ipsum dolor *sit amet*",
+  "text": "Watch our introduction video: lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor with {name}.",
+  "video": {
+    "youtube": "aqz-KE-bpKQ",
+    "title": "{name} introduction video",
+    "caption": "Introducing {name}"
+  },
+  "items": [
+    {
+      "title": "Lorem ipsum",
+      "text": "Dolor sit amet, consectetur adipiscing elit sed do",
+      "mark": "underline"
+    },
+    {
+      "title": "Dolor sit amet",
+      "text": "Ut enim ad minim veniam, quis nostrud exercitation",
+      "mark": "underline"
+    },
+    {
+      "title": "Consectetur elit",
+      "href": "https://example.com/standard",
+      "text": "Duis aute irure dolor in reprehenderit in voluptate",
+      "mark": "underline"
+    }
+  ]
+}

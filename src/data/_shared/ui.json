@@ -1,0 +1,37 @@
+{
+  "$schema": "./schemas/ui.schema.json",
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "mainNav": "Main",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "home": "{name} home",
+    "backToTop": "{name}, back to top",
+    "dismissBanner": "Dismiss banner",
+    "toggleTheme": "Switch to {mode} mode",
+    "playVideo": "Play video: {title}",
+    "partners": "Partners",
+    "steps": "Steps",
+    "pauseVideo": "Pause video: {title}"
+  },
+  "copy": "Copy",
+  "copied": "Copied",
+  "recommended": "Your system",
+  "pdfFallback": "PDF preview",
+  "notFound": {
+    "path": "/404",
+    "title": "Page not found",
+    "description": "This page does not exist. Head back to the homepage to explore the app, its paper, downloads and tutorials.",
+    "heading": "This page wandered *off the map.*",
+    "action": {
+      "label": "Back to the homepage",
+      "to": "/"
+    }
+  },
+  "pdfOpen": "Open",
+  "themeNames": {
+    "light": "light",
+    "dark": "dark"
+  },
+  "codeLanguage": "bash"
+}

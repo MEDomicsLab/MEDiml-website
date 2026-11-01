@@ -1,0 +1,161 @@
+{
+  "$schema": "./_shared/schemas/site.schema.json",
+  "brand": {
+    "name": "MEDxxx",
+    "version": "0.1.0",
+    "logo": "/images/brand/logo.webp",
+    "logoInverse": "/images/brand/logo-white.webp",
+    "logoAlt": "MEDxxx logo",
+    "favicon": "/favicon.png",
+    "touchIcon": "/apple-touch-icon.png"
+  },
+  "links": {
+    "docsApp": "https://example.com/docs/app",
+    "quickStart": "https://example.com/docs/app/quick-start",
+    "docsPackage": "https://example.com/docs/package",
+    "githubApp": "https://github.com/MEDomicsLab",
+    "githubPackage": "https://github.com/MEDomicsLab",
+    "issues": "https://example.com/issues",
+    "releases": "https://example.com/releases/v{version}",
+    "playlist": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+    "discord": "https://example.com/discord",
+    "lab": "https://medomicslab.com/",
+    "paper": "https://example.com/paper",
+    "paperPdf": "/docs/lorem-ipsum.pdf",
+    "youtubeApi": "https://www.youtube.com/iframe_api",
+    "youtubeEmbed": "https://www.youtube-nocookie.com/embed/"
+  },
+  "seo": {
+    "siteUrl": "https://example.com",
+    "siteName": "MEDxxx",
+    "homeTitle": "Home",
+    "titleTemplate": "%s | MEDxxx | Lorem ipsum",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "image": {
+      "src": "/images/og.png",
+      "alt": "MEDxxx, lorem ipsum dolor sit amet",
+      "width": 1200,
+      "height": 630
+    },
+    "locale": "en_CA",
+    "application": {
+      "category": "HealthApplication",
+      "operatingSystem": "Windows, macOS, Linux",
+      "codeRepository": "@githubApp",
+      "offer": {
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  },
+  "banner": {
+    "enabled": true,
+    "id": "lorem-ipsum",
+    "text": "{name} lorem ipsum dolor sit amet, **consectetur** adipiscing elit.",
+    "dismissible": true
+  },
+  "nav": {
+    "items": [
+      {
+        "label": "Docs",
+        "children": [
+          {
+            "label": "{name}-app",
+            "href": "@docsApp",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            "icon": "laptop"
+          },
+          {
+            "label": "{name}-pkg",
+            "href": "@docsPackage",
+            "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+            "icon": "code"
+          }
+        ],
+        "title": "Documentation",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "label": "Paper",
+        "to": "/#paper"
+      },
+      {
+        "label": "Features",
+        "to": "/#features"
+      },
+      {
+        "label": "Download",
+        "to": "/#download"
+      },
+      {
+        "label": "Tutorials",
+        "to": "/#tutorials"
+      },
+      {
+        "label": "Our Lab",
+        "href": "@lab"
+      }
+    ],
+    "themeToggle": true,
+    "secondary": {
+      "label": "Discord",
+      "href": "@discord",
+      "icon": "discord"
+    },
+    "primary": {
+      "label": "GitHub",
+      "href": "@githubApp",
+      "icon": "github"
+    }
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": "Navigation",
+        "source": "nav"
+      },
+      {
+        "title": "Resources",
+        "links": [
+          {
+            "label": "App documentation",
+            "href": "@docsApp"
+          },
+          {
+            "label": "Code documentation",
+            "href": "@docsPackage"
+          },
+          {
+            "label": "Video tutorials",
+            "href": "@playlist"
+          }
+        ]
+      },
+      {
+        "title": "Community",
+        "links": [
+          {
+            "label": "GitHub (package)",
+            "href": "@githubPackage"
+          },
+          {
+            "label": "GitHub (app)",
+            "href": "@githubApp"
+          },
+          {
+            "label": "Report issues",
+            "href": "@issues"
+          }
+        ]
+      }
+    ],
+    "wordmark": "{name}",
+    "note": {
+      "label": "Copyright © 2026 · All Rights Reserved"
+    },
+    "credit": {
+      "label": "Designed by Simon",
+      "href": "https://simonprovost.xyz/"
+    }
+  }
+}

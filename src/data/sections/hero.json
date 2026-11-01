@@ -1,0 +1,63 @@
+{
+  "$schema": "../_shared/schemas/sections/hero.schema.json",
+  "id": "top",
+  "layout": "split",
+  "title": "Lorem ipsum\ndolor *sit*\namet elit",
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam with {name}.",
+  "actions": [
+    {
+      "label": "Get started",
+      "href": "@docsApp",
+      "variant": "primary"
+    },
+    {
+      "label": "Watch tutorials",
+      "href": "@playlist",
+      "icon": "play"
+    }
+  ],
+  "badges": ["Lorem ipsum dolor", "Sit amet elit"],
+  "media": [
+    {
+      "src": "/images/screens/screen-wide.webp",
+      "alt": "Lorem ipsum placeholder screenshot",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "/images/screens/screen-square.webp",
+      "alt": "Lorem ipsum placeholder detail",
+      "width": 640,
+      "height": 640
+    }
+  ],
+  "partners": {
+    "label": "In partnership with",
+    "items": [
+      {
+        "name": "Lorem",
+        "logo": "/images/partners/lorem.webp",
+        "logoDark": "/images/partners/lorem-white.webp",
+        "href": "https://example.com/lorem"
+      },
+      {
+        "name": "Ipsum",
+        "logo": "/images/partners/ipsum.webp",
+        "logoDark": "/images/partners/ipsum-white.webp",
+        "href": "https://example.com/ipsum"
+      },
+      {
+        "name": "Dolor",
+        "logo": "/images/partners/dolor.webp",
+        "logoDark": "/images/partners/dolor-white.webp",
+        "href": "https://example.com/dolor"
+      },
+      {
+        "name": "Amet",
+        "logo": "/images/partners/amet.webp",
+        "logoDark": "/images/partners/amet-white.webp"
+      }
+    ]
+  },
+  "scrollExpand": true
+}

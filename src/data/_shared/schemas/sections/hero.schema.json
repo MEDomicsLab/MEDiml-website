@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hero",
+  "description": "Opening section: title, text, actions, screenshots and partner logos.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Anchor: /#id."
+    },
+    "title": {
+      "$ref": "../common.schema.json#/definitions/text"
+    },
+    "text": {
+      "$ref": "../common.schema.json#/definitions/text"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "$ref": "../common.schema.json#/definitions/link"
+      }
+    },
+    "badges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 4
+    },
+    "media": {
+      "type": "array",
+      "items": {
+        "$ref": "../common.schema.json#/definitions/image"
+      },
+      "maxItems": 2,
+      "description": "First image: the main window. Second image: the smaller floating window."
+    },
+    "partners": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "logo": {
+                "type": "string"
+              },
+              "href": {
+                "$ref": "../common.schema.json#/definitions/href"
+              },
+              "logoDark": {
+                "type": "string",
+                "description": "Optional logo for dark mode. Without it, the logo turns white."
+              }
+            },
+            "required": ["name", "logo"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "layout": {
+      "type": "string",
+      "enum": ["split", "center"],
+      "description": "split: text left, screenshots right. center: stacked."
+    },
+    "scrollExpand": {
+      "type": "boolean",
+      "default": false,
+      "description": "Expand a split hero image to the content width while its text slides underneath on scroll. Reverses when scrolling up. Uses the static layout on small screens and with reduced motion."
+    }
+  },
+  "required": ["title"],
+  "additionalProperties": false
+}

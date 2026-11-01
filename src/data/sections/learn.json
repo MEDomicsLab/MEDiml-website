@@ -1,0 +1,65 @@
+{
+  "$schema": "../_shared/schemas/sections/learn.schema.json",
+  "id": "tutorials",
+  "title": "Learn {name}, *two ways*",
+  "text": "Lorem ipsum videos for {name}-app, dolor sit amet guides for {name}-pkg.",
+  "tracks": [
+    {
+      "title": "Learn {name}-app with guided videos",
+      "meta": "Desktop application",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "video": {
+        "youtube": "aqz-KE-bpKQ",
+        "title": "{name}-app tutorial",
+        "caption": "Lorem ipsum tutorial"
+      },
+      "action": {
+        "label": "Watch on YouTube",
+        "href": "@playlist",
+        "icon": "youtube"
+      }
+    },
+    {
+      "title": "Learn {name}-pkg, step by step",
+      "meta": "Python package",
+      "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris, from pip install to lorem ipsum.",
+      "install": {
+        "code": "pip install medxxx",
+        "language": "bash"
+      },
+      "linkLabel": "Open tutorial",
+      "items": [
+        {
+          "title": "Install {name}-pkg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "href": "@docsPackage/tutorial-1"
+        },
+        {
+          "title": "Prepare your data",
+          "text": "Sed do eiusmod tempor incididunt ut labore et dolore.",
+          "href": "@docsPackage/tutorial-2"
+        },
+        {
+          "title": "Configure lorem",
+          "text": "Ut enim ad minim veniam, quis nostrud exercitation.",
+          "href": "@docsPackage/tutorial-3"
+        },
+        {
+          "title": "Dolor manager",
+          "text": "Duis aute irure dolor in reprehenderit in voluptate.",
+          "href": "@docsPackage/tutorial-4"
+        },
+        {
+          "title": "Batch ipsum",
+          "text": "Excepteur sint occaecat cupidatat non proident.",
+          "href": "@docsPackage/tutorial-5"
+        },
+        {
+          "title": "Sit amet models",
+          "text": "Sed ut perspiciatis unde omnis iste natus error.",
+          "href": "@docsPackage/tutorial-6"
+        }
+      ]
+    }
+  ]
+}

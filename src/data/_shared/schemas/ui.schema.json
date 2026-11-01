@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Interface wording: screen-reader labels, button words and the 404 page",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "a11y": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "properties": {
+        "playVideo": {
+          "type": "string"
+        },
+        "pauseVideo": {
+          "type": "string"
+        }
+      },
+      "required": ["playVideo", "pauseVideo"]
+    },
+    "copy": {
+      "type": "string"
+    },
+    "copied": {
+      "type": "string"
+    },
+    "recommended": {
+      "type": "string"
+    },
+    "pdfFallback": {
+      "type": "string"
+    },
+    "notFound": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "const": "/404"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "action": {
+          "$ref": "common.schema.json#/definitions/link"
+        }
+      },
+      "required": ["path", "title", "description", "heading"],
+      "additionalProperties": false
+    },
+    "pdfOpen": {
+      "type": "string"
+    },
+    "themeNames": {
+      "type": "object",
+      "properties": {
+        "light": {
+          "type": "string"
+        },
+        "dark": {
+          "type": "string"
+        }
+      },
+      "required": ["light", "dark"],
+      "additionalProperties": false
+    },
+    "codeLanguage": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "a11y",
+    "copy",
+    "copied",
+    "notFound",
+    "pdfOpen",
+    "pdfFallback",
+    "recommended",
+    "themeNames",
+    "codeLanguage"
+  ],
+  "additionalProperties": false
+}

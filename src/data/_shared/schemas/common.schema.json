@@ -1,0 +1,181 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Shared building blocks",
+  "definitions": {
+    "text": {
+      "type": "string",
+      "description": "Text with optional markup: **bold**, *italic* (light italic in titles), `code`, [label](@link or URL) and \\n for a line break. {name} and {version} are replaced by brand values."
+    },
+    "icon": {
+      "type": "string",
+      "enum": [
+        "arrowUpRight",
+        "arrowRight",
+        "arrowDown",
+        "chevronDown",
+        "download",
+        "external",
+        "mail",
+        "close",
+        "check",
+        "copy",
+        "book",
+        "terminal",
+        "package",
+        "laptop",
+        "alert",
+        "file",
+        "shield",
+        "code",
+        "users",
+        "sun",
+        "moon",
+        "play",
+        "github",
+        "discord",
+        "youtube"
+      ]
+    },
+    "mark": {
+      "type": "string",
+      "description": "Hand-drawn stroke drawn on hover: loop, wave, line, arrow (connect a word to its text), underline, circle, check.",
+      "enum": ["loop", "wave", "line", "arrow", "underline", "circle", "check"]
+    },
+    "href": {
+      "type": "string",
+      "description": "Any URL, or @name / @name/path pointing to site.json → links."
+    },
+    "link": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "$ref": "#/definitions/text"
+        },
+        "to": {
+          "type": "string",
+          "description": "A page of this site, e.g. / or /#download."
+        },
+        "href": {
+          "$ref": "#/definitions/href"
+        },
+        "icon": {
+          "$ref": "#/definitions/icon"
+        },
+        "variant": {
+          "type": "string",
+          "enum": ["primary", "secondary", "link"],
+          "description": "primary: solid ink. secondary: outline (default). link: small mono underlined text."
+        },
+        "newTab": {
+          "type": "boolean"
+        },
+        "disabled": {
+          "type": "boolean"
+        },
+        "text": {
+          "$ref": "#/definitions/text",
+          "description": "Optional supporting copy in navigation previews."
+        }
+      },
+      "required": ["label"],
+      "anyOf": [
+        {
+          "required": ["to"]
+        },
+        {
+          "required": ["href"]
+        },
+        {
+          "properties": {
+            "disabled": {
+              "const": true
+            }
+          },
+          "required": ["disabled"]
+        }
+      ],
+      "additionalProperties": false
+    },
+    "image": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string",
+          "pattern": "^(/|https?://)"
+        },
+        "alt": {
+          "$ref": "#/definitions/text"
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "fit": {
+          "type": "string",
+          "enum": ["bleed", "contain"],
+          "description": "bleed: the screenshot peeks out of the blue paper mat. contain: centred. Default: contain when the image is near square."
+        }
+      },
+      "required": ["src", "alt"],
+      "additionalProperties": false
+    },
+    "video": {
+      "type": "object",
+      "properties": {
+        "youtube": {
+          "type": "string",
+          "description": "A YouTube video id."
+        },
+        "playlist": {
+          "type": "string",
+          "description": "A YouTube playlist id."
+        },
+        "title": {
+          "$ref": "#/definitions/text"
+        },
+        "text": {
+          "$ref": "#/definitions/text"
+        },
+        "caption": {
+          "$ref": "#/definitions/text"
+        },
+        "poster": {
+          "type": "string"
+        }
+      },
+      "required": ["title"],
+      "oneOf": [
+        {
+          "required": ["youtube"]
+        },
+        {
+          "required": ["playlist"]
+        }
+      ],
+      "additionalProperties": false
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "mark": {
+            "$ref": "#/definitions/mark"
+          }
+        },
+        "required": ["title"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

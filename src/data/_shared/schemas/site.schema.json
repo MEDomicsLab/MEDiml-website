@@ -1,0 +1,280 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Site: brand, links, SEO, banner, navigation and footer",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The app name, used everywhere as {name}."
+        },
+        "version": {
+          "type": "string",
+          "description": "Current release, used as {version} (badges and download URLs)."
+        },
+        "logo": {
+          "type": "string",
+          "description": "Logo for light backgrounds."
+        },
+        "logoInverse": {
+          "type": "string",
+          "description": "Logo for dark backgrounds and the blue footer."
+        },
+        "logoAlt": {
+          "type": "string"
+        },
+        "favicon": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Browser-tab icon URL. Local paths are relative to public/."
+        },
+        "touchIcon": {
+          "type": "string"
+        }
+      },
+      "required": ["name", "logo", "logoInverse", "logoAlt", "favicon", "touchIcon"],
+      "additionalProperties": false
+    },
+    "links": {
+      "type": "object",
+      "description": "Every URL used more than once. Point to one with @name, or @name/path.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "seo": {
+      "type": "object",
+      "properties": {
+        "siteUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "siteName": {
+          "type": "string"
+        },
+        "homeTitle": {
+          "type": "string",
+          "description": "Home page name in the browser tab. It replaces %s in titleTemplate."
+        },
+        "titleTemplate": {
+          "type": "string",
+          "description": "%s is replaced by the page title."
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "src": {
+              "type": "string"
+            },
+            "alt": {
+              "type": "string"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            }
+          },
+          "required": ["src", "alt", "width", "height"],
+          "additionalProperties": false
+        },
+        "locale": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}([_-][A-Za-z0-9]{2,8})*$"
+        },
+        "application": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "operatingSystem": {
+              "type": "string"
+            },
+            "codeRepository": {
+              "$ref": "common.schema.json#/definitions/href"
+            },
+            "offer": {
+              "type": "object",
+              "properties": {
+                "price": {
+                  "type": "string"
+                },
+                "priceCurrency": {
+                  "type": "string"
+                }
+              },
+              "required": ["price", "priceCurrency"],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "siteUrl",
+        "siteName",
+        "homeTitle",
+        "titleTemplate",
+        "description",
+        "image",
+        "locale"
+      ],
+      "additionalProperties": false
+    },
+    "banner": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string",
+          "description": "Change it to show a dismissed banner again to everyone."
+        },
+        "text": {
+          "$ref": "common.schema.json#/definitions/text"
+        },
+        "link": {
+          "$ref": "common.schema.json#/definitions/link"
+        },
+        "dismissible": {
+          "type": "boolean"
+        }
+      },
+      "required": ["enabled"],
+      "additionalProperties": false
+    },
+    "nav": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              },
+              "href": {
+                "$ref": "common.schema.json#/definitions/href"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/definitions/link"
+                },
+                "minItems": 1
+              },
+              "title": {
+                "type": "string",
+                "description": "Dropdown heading."
+              },
+              "text": {
+                "type": "string",
+                "description": "Dropdown introduction."
+              }
+            },
+            "required": ["label"],
+            "anyOf": [
+              {
+                "required": ["to"]
+              },
+              {
+                "required": ["href"]
+              },
+              {
+                "required": ["children"]
+              }
+            ],
+            "additionalProperties": false
+          }
+        },
+        "themeToggle": {
+          "type": "boolean"
+        },
+        "secondary": {
+          "$ref": "common.schema.json#/definitions/link"
+        },
+        "primary": {
+          "$ref": "common.schema.json#/definitions/link"
+        }
+      },
+      "required": ["items"],
+      "additionalProperties": false
+    },
+    "footer": {
+      "type": "object",
+      "properties": {
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "source": {
+                "type": "string",
+                "enum": ["nav"],
+                "description": "nav: repeat the navigation links."
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/definitions/link"
+                }
+              }
+            },
+            "required": ["title"],
+            "additionalProperties": false
+          }
+        },
+        "wordmark": {
+          "type": "string"
+        },
+        "note": {
+          "$ref": "#/definitions/label"
+        },
+        "credit": {
+          "$ref": "#/definitions/label"
+        }
+      },
+      "required": ["columns"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["brand", "links", "seo", "nav", "footer"],
+  "additionalProperties": false,
+  "definitions": {
+    "label": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "href": {
+          "$ref": "common.schema.json#/definitions/href"
+        },
+        "to": {
+          "type": "string"
+        }
+      },
+      "required": ["label"],
+      "additionalProperties": false
+    }
+  }
+}

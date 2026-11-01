@@ -1,0 +1,61 @@
+{
+  "$schema": "../_shared/schemas/sections/download.schema.json",
+  "id": "download",
+  "title": "Lorem ipsum *now*",
+  "text": "Use {name}-pkg as a Python package or install the {name}-app desktop application. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+  "download": {
+    "title": "{name}-app",
+    "release": "v{version}, pre-release",
+    "items": [
+      {
+        "label": "Windows",
+        "file": ".exe",
+        "os": "windows",
+        "href": "@releases/MEDxxx-app-{version}-win.exe"
+      },
+      {
+        "label": "macOS",
+        "file": ".dmg",
+        "os": "mac",
+        "href": "@releases/MEDxxx-app-{version}-mac.dmg"
+      },
+      {
+        "label": "Linux",
+        "file": ".deb",
+        "os": "linux",
+        "href": "@releases/MEDxxx-app-{version}-linux.deb"
+      }
+    ],
+    "links": [
+      {
+        "label": "Install guide",
+        "href": "@quickStart"
+      },
+      {
+        "label": "Docs",
+        "href": "@docsApp"
+      },
+      {
+        "label": "GitHub",
+        "href": "@githubApp"
+      }
+    ]
+  },
+  "help": {
+    "title": "Troubleshooting",
+    "items": [
+      {
+        "title": "Lorem ipsum: required step",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Before opening {name}-app, run this command in the Terminal:",
+        "code": "sudo xattr -cr /Applications/MEDxxx-app.app",
+        "language": "bash"
+      }
+    ],
+    "links": [
+      {
+        "label": "Report an issue",
+        "href": "@issues"
+      }
+    ]
+  }
+}

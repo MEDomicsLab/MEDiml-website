@@ -1,0 +1,277 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Theme: colours, accent texture and fonts",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["light", "dark", "system"],
+      "description": "Default look. Visitors can still switch when site.json → nav.themeToggle is true."
+    },
+    "light": {
+      "$ref": "#/definitions/palette"
+    },
+    "dark": {
+      "$ref": "#/definitions/palette"
+    },
+    "accent": {
+      "type": "object",
+      "description": "The blue paper: a texture, a tint over it, and a paper grain on top.",
+      "properties": {
+        "color": {
+          "type": "string"
+        },
+        "tint": {
+          "type": "string"
+        },
+        "texture": {
+          "type": "string"
+        },
+        "paper": {
+          "type": "string"
+        },
+        "ink": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "description": "Gradient for hand-drawn strokes, top to bottom, sampled from the texture."
+        }
+      },
+      "required": ["color", "tint", "texture", "paper"],
+      "additionalProperties": false
+    },
+    "fonts": {
+      "type": "object",
+      "properties": {
+        "sans": {
+          "type": "string"
+        },
+        "mono": {
+          "type": "string"
+        }
+      },
+      "required": ["sans", "mono"],
+      "additionalProperties": false
+    },
+    "preload": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "fontFaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "family": {
+            "type": "string"
+          },
+          "src": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string",
+            "enum": ["opentype", "truetype", "woff", "woff2"]
+          },
+          "weight": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,3}( [1-9][0-9]{0,3})?$"
+          },
+          "style": {
+            "type": "string",
+            "enum": ["normal", "italic", "oblique"]
+          }
+        },
+        "required": ["family", "src", "format", "weight", "style"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["mode", "light", "dark", "accent", "fonts", "fontFaces"],
+  "additionalProperties": false,
+  "definitions": {
+    "palette": {
+      "type": "object",
+      "properties": {
+        "bg": {
+          "type": "string",
+          "description": "Page background."
+        },
+        "surface": {
+          "type": "string",
+          "description": "Cards."
+        },
+        "nav": {
+          "type": "string",
+          "description": "Navigation bar and menus."
+        },
+        "navShadow": {
+          "type": "string"
+        },
+        "innerNav": {
+          "type": "string",
+          "description": "Compact research navbar background."
+        },
+        "ink": {
+          "type": "string",
+          "description": "Main text."
+        },
+        "muted": {
+          "type": "string",
+          "description": "Secondary text."
+        },
+        "faint": {
+          "type": "string",
+          "description": "Indices and labels."
+        },
+        "line": {
+          "type": "string"
+        },
+        "lineStrong": {
+          "type": "string"
+        },
+        "onAccent": {
+          "type": "string",
+          "description": "Text on the blue paper."
+        },
+        "scribble": {
+          "type": "string",
+          "description": "Hand-drawn strokes and focus rings."
+        },
+        "selection": {
+          "type": "string"
+        },
+        "shadow": {
+          "type": "string"
+        },
+        "codeBg": {
+          "type": "string"
+        },
+        "codeInk": {
+          "type": "string"
+        },
+        "codeMuted": {
+          "type": "string"
+        },
+        "codeKeyword": {
+          "type": "string"
+        },
+        "codeString": {
+          "type": "string"
+        },
+        "codeNumber": {
+          "type": "string"
+        },
+        "highlight": {
+          "type": "string",
+          "description": "Hover tint behind menu items and soft buttons."
+        },
+        "button": {
+          "type": "string",
+          "description": "Main button background."
+        },
+        "onButton": {
+          "type": "string",
+          "description": "Main button text."
+        },
+        "stroke": {
+          "type": "string",
+          "description": "Hand-drawn strokes: url(#paper-ink) uses the accent ink gradient, or any colour."
+        },
+        "document": {
+          "type": "string",
+          "description": "PDF and screenshot backing."
+        },
+        "mediaBg": {
+          "type": "string",
+          "description": "Unloaded video background."
+        },
+        "shadowSoft": {
+          "type": "string",
+          "description": "Ambient window shadow."
+        },
+        "stageLine": {
+          "type": "string",
+          "description": "Screenshot outline."
+        },
+        "stageShadow": {
+          "type": "string",
+          "description": "Screenshot and engraved play shadows."
+        },
+        "paperGlint": {
+          "type": "string",
+          "description": "Highlights on textured paper."
+        },
+        "badge": {
+          "type": "string",
+          "description": "Translucent badge background."
+        },
+        "badgeDark": {
+          "type": "string",
+          "description": "Dark translucent badge background."
+        },
+        "playInk": {
+          "type": "string",
+          "description": "Engraved video play mark."
+        },
+        "codeLine": {
+          "type": "string",
+          "description": "Code toolbar divider."
+        },
+        "codeHighlight": {
+          "type": "string",
+          "description": "Code copy button hover."
+        },
+        "codeFunction": {
+          "type": "string",
+          "description": "Function names in code."
+        }
+      },
+      "required": [
+        "bg",
+        "surface",
+        "nav",
+        "navShadow",
+        "innerNav",
+        "ink",
+        "muted",
+        "faint",
+        "line",
+        "lineStrong",
+        "onAccent",
+        "scribble",
+        "selection",
+        "shadow",
+        "codeBg",
+        "codeInk",
+        "codeMuted",
+        "codeKeyword",
+        "codeString",
+        "codeNumber",
+        "highlight",
+        "button",
+        "onButton",
+        "stroke",
+        "document",
+        "mediaBg",
+        "shadowSoft",
+        "stageLine",
+        "stageShadow",
+        "paperGlint",
+        "badge",
+        "badgeDark",
+        "playInk",
+        "codeLine",
+        "codeHighlight",
+        "codeFunction"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

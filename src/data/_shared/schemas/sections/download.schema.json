@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Download",
+  "description": "Installers for each system and troubleshooting notes.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Anchor: /#id."
+    },
+    "title": {
+      "$ref": "../common.schema.json#/definitions/text"
+    },
+    "text": {
+      "$ref": "../common.schema.json#/definitions/text"
+    },
+    "align": {
+      "type": "string",
+      "enum": ["split", "center"]
+    },
+    "download": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "release": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "file": {
+                "type": "string"
+              },
+              "os": {
+                "type": "string",
+                "enum": ["windows", "mac", "linux"]
+              },
+              "href": {
+                "$ref": "../common.schema.json#/definitions/href"
+              }
+            },
+            "required": ["label", "href"],
+            "additionalProperties": false
+          }
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "$ref": "../common.schema.json#/definitions/link"
+          }
+        }
+      },
+      "required": ["title", "items"],
+      "additionalProperties": false
+    },
+    "help": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string",
+                "enum": ["bash", "python", "text"]
+              }
+            },
+            "required": ["title"],
+            "additionalProperties": false
+          }
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "$ref": "../common.schema.json#/definitions/link"
+          }
+        }
+      },
+      "required": ["title", "items"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["title"],
+  "additionalProperties": false
+}

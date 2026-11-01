@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Discover",
+  "description": "A video or image beside a numbered list.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Anchor: /#id."
+    },
+    "title": {
+      "$ref": "../common.schema.json#/definitions/text"
+    },
+    "text": {
+      "$ref": "../common.schema.json#/definitions/text"
+    },
+    "align": {
+      "type": "string",
+      "enum": ["split", "center"]
+    },
+    "video": {
+      "$ref": "../common.schema.json#/definitions/video"
+    },
+    "image": {
+      "$ref": "../common.schema.json#/definitions/image"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "mark": {
+            "$ref": "../common.schema.json#/definitions/mark"
+          },
+          "href": {
+            "$ref": "../common.schema.json#/definitions/href",
+            "description": "Optional link: the item becomes clickable."
+          },
+          "to": {
+            "type": "string",
+            "description": "Optional link to a page or anchor, such as /#download."
+          },
+          "newTab": {
+            "type": "boolean"
+          }
+        },
+        "required": ["title"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["title"],
+  "additionalProperties": false
+}

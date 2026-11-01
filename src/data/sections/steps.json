@@ -1,0 +1,30 @@
+{
+  "$schema": "../_shared/schemas/sections/steps.schema.json",
+  "id": "steps",
+  "align": "center",
+  "title": "Lorem ipsum in {count} steps",
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+  "items": [
+    {
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit with {name}.",
+      "mark": "loop"
+    },
+    {
+      "title": "Dolor sit amet",
+      "text": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "mark": "wave"
+    },
+    {
+      "title": "Consectetur elit",
+      "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "mark": "circle"
+    },
+    {
+      "title": "Tempor incididunt",
+      "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "mark": "check"
+    }
+  ],
+  "scrollProgress": true
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "../_shared/schemas/sections/paper.schema.json",
+  "id": "paper",
+  "title": "The *research* behind {name}",
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "papers": [
+    {
+      "label": "Software paper",
+      "reference": "arXiv:0000.00000",
+      "title": "Lorem Ipsum Dolor Sit Amet: Consectetur Adipiscing Elit",
+      "authors": "Lorem Ipsum, Dolor Sit et al.",
+      "venue": "Lorem Ipsum (lo.IP) · Dolor Sit (do.SA)",
+      "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "actions": [
+        {
+          "label": "Download PDF",
+          "href": "@paperPdf",
+          "variant": "primary",
+          "icon": "download"
+        },
+        {
+          "label": "Read online",
+          "href": "@paper"
+        }
+      ],
+      "pdf": {
+        "src": "@paperPdf",
+        "name": "lorem-ipsum.pdf",
+        "note": "If the PDF does not load in your browser, use [Download PDF](@paperPdf) or read it [online](@paper)."
+      }
+    },
+    {
+      "label": "Reference manual",
+      "reference": "arXiv:0000.00001",
+      "title": "Reference Manual of {name}",
+      "authors": "Lorem Ipsum, Dolor Sit et al.",
+      "venue": "Lorem Ipsum (lo.IP)",
+      "abstract": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+      "actions": [
+        {
+          "label": "Download PDF",
+          "href": "@paperPdf",
+          "variant": "primary",
+          "icon": "download"
+        },
+        {
+          "label": "Read online",
+          "href": "@paper"
+        }
+      ],
+      "pdf": {
+        "src": "@paperPdf",
+        "name": "lorem-manual.pdf",
+        "note": "If the PDF does not load in your browser, use [Download PDF](@paperPdf) or read it [online](@paper)."
+      }
+    },
+    {
+      "label": "Study",
+      "reference": "arXiv:0000.00002",
+      "title": "Nemo Enim Ipsam Voluptatem: Quia Voluptas Sit Aspernatur",
+      "authors": "Ipsum et al.",
+      "venue": "Dolor Sit (do.SA)",
+      "abstract": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+      "blocks": [
+        {
+          "title": "Lorem",
+          "content": "5 ipsum"
+        },
+        {
+          "title": "Dolor",
+          "content": "1,234"
+        },
+        {
+          "title": "Sit amet",
+          "content": "56,789 elit"
+        },
+        {
+          "title": "Subject",
+          "content": "lo.IP / do.SA"
+        }
+      ],
+      "actions": [
+        {
+          "label": "Download PDF",
+          "href": "@paperPdf",
+          "variant": "primary",
+          "icon": "download"
+        },
+        {
+          "label": "Read online",
+          "href": "@paper"
+        }
+      ],
+      "pdf": {
+        "src": "@paperPdf",
+        "name": "lorem-study.pdf",
+        "note": "If the PDF does not load in your browser, use [Download PDF](@paperPdf) or read it [online](@paper)."
+      }
+    }
+  ]
+}
