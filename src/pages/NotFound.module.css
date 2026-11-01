@@ -1,0 +1,34 @@
+.page {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 28px;
+  min-height: calc(100svh - var(--header-height));
+  padding: 80px var(--site-gutter) 120px;
+  text-align: center;
+}
+
+.heading {
+  max-width: 14ch;
+  font-size: var(--text-display);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  text-wrap: balance;
+}
+
+.text {
+  max-width: 46ch;
+  font-size: var(--text-lead);
+  color: var(--color-muted);
+}
+
+.action {
+  position: relative;
+  display: inline-block;
+  margin-top: 12px;
+  line-height: 0;
+}
+
+.circle {
+  color: var(--color-scribble);
+}
