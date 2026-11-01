@@ -1,27 +1,27 @@
 {
   "$schema": "../_shared/schemas/sections/features.schema.json",
   "id": "features",
-  "title": "Lorem ipsum to *insights*",
-  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore, all in one place.",
+  "title": "From Images to *Insights*",
+  "text": "Load medical images, configure extraction parameters, extract IBSI-compliant radiomics features, train models, and export results, all in one platform.",
   "steps": [
     {
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. {name} sed do eiusmod tempor incididunt.",
+      "title": "Load Medical Images",
+      "text": "Import DICOM or NIfTI scans along with segmentation masks. {name} supports widely used medical imaging formats.",
       "image": {
-        "src": "/images/screens/screen-wide.webp",
-        "alt": "Lorem ipsum placeholder screenshot",
-        "width": 1600,
-        "height": 1000
+        "src": "/images/screens/data-manager.webp",
+        "alt": "Loading medical images in the MEDiml data manager",
+        "width": 1579,
+        "height": 1016
       },
       "links": [
         {
           "label": "Documentation",
-          "href": "@docsApp",
+          "href": "@docsApp/radiomics/data-processing/data-manager",
           "icon": "book"
         },
         {
           "label": "Tutorial",
-          "href": "@playlist",
+          "href": "https://www.youtube.com/watch?v=JS6CWvUkMFY",
           "icon": "play"
         },
         {
@@ -32,23 +32,23 @@
       ]
     },
     {
-      "title": "Dolor sit amet",
-      "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+      "title": "Explore Your Data",
+      "text": "Visualize scans and ROIs, inspect metadata, and review data statistics before extraction.",
       "image": {
-        "src": "/images/screens/screen-square.webp",
-        "alt": "Lorem ipsum placeholder screenshot",
-        "width": 640,
-        "height": 640
+        "src": "/images/screens/image-viewer.webp",
+        "alt": "Exploring a 3D scan in the MEDiml image viewer",
+        "width": 599,
+        "height": 603
       },
       "links": [
         {
           "label": "Documentation",
-          "href": "@docsApp",
+          "href": "@docsApp/radiomics/data-processing/radiomics-pre-checks",
           "icon": "book"
         },
         {
-          "label": "Tutorial",
-          "href": "@playlist",
+          "label": "Tutorials",
+          "href": "https://www.youtube.com/watch?v=rkpRYdb18k4&list=PLEPy2VhC4-D5Eg-UxRyTtmUZRh-D5m_Ru&index=5",
           "icon": "play"
         },
         {
@@ -59,109 +59,109 @@
       ]
     },
     {
-      "title": "Consectetur elit",
-      "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+      "title": "Configure Extraction",
+      "text": "Set up IBSI-compliant radiomics feature extraction parameters. Customize filters, discretization, and feature families.",
       "image": {
-        "src": "/images/screens/screen-panel.webp",
-        "alt": "Lorem ipsum placeholder screenshot",
-        "width": 1500,
-        "height": 950
+        "src": "/images/screens/extraction-settings.webp",
+        "alt": "Choosing radiomics feature families in MEDiml",
+        "width": 1513,
+        "height": 957
       },
       "links": [
         {
-          "label": "Documentation",
-          "href": "@docsApp",
+          "label": "Code documentation",
+          "href": "@docsPackage/en/latest/configurations_file.html",
           "icon": "book"
         },
         {
-          "label": "Tutorial",
-          "href": "@playlist",
-          "icon": "play"
+          "label": "IBSI standards",
+          "href": "@ibsi",
+          "icon": "shield"
         },
         {
-          "label": "GitHub",
-          "href": "@githubPackage",
+          "label": "Settings",
+          "href": "@notebooks/tutorial/settings",
           "icon": "github"
         }
       ]
     },
     {
-      "title": "Sed do eiusmod",
-      "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.",
+      "title": "Extract Features",
+      "text": "Run batch extraction on individual scans or entire datasets. Features are computed following the IBSI workflow.",
       "image": {
-        "src": "/images/screens/screen-chart.webp",
-        "alt": "Lorem ipsum placeholder screenshot",
-        "width": 1200,
-        "height": 640
+        "src": "/images/screens/extraction-pipeline.webp",
+        "alt": "A MEDiml radiomics extraction pipeline",
+        "width": 1479,
+        "height": 926
       },
       "links": [
         {
           "label": "Documentation",
-          "href": "@docsApp",
+          "href": "@docsApp/radiomics/feature-extraction",
           "icon": "book"
         },
         {
-          "label": "Tutorial",
-          "href": "@playlist",
+          "label": "Quick start",
+          "href": "https://www.youtube.com/watch?v=BDFuzRM1fes&list=PLEPy2VhC4-D5Eg-UxRyTtmUZRh-D5m_Ru&index=8",
           "icon": "play"
         },
         {
           "label": "GitHub",
-          "href": "@githubPackage",
+          "href": "@githubPackage/blob/main/notebooks/tutorial/BatchExtractor-Tutorial.ipynb",
           "icon": "github"
         }
       ]
     },
     {
-      "title": "Tempor incididunt",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium. {name} totam rem aperiam.",
+      "title": "Train Models",
+      "text": "Use extracted features to train predictive models. {name} offers tailored functionalities for model training and validation.",
       "image": {
-        "src": "/images/screens/screen-wide.webp",
-        "alt": "Lorem ipsum placeholder screenshot",
-        "width": 1600,
-        "height": 1000
+        "src": "/images/screens/learning-pipeline.webp",
+        "alt": "A MEDiml model training pipeline",
+        "width": 1859,
+        "height": 992
       },
       "links": [
         {
           "label": "Documentation",
-          "href": "@docsApp",
+          "href": "@docsApp/learning",
           "icon": "book"
         },
         {
-          "label": "Tutorial",
-          "href": "@playlist",
+          "label": "Tutorials",
+          "href": "https://www.youtube.com/watch?v=Q4Y5xsvi9G0&list=PLEPy2VhC4-D5Eg-UxRyTtmUZRh-D5m_Ru&index=7",
           "icon": "play"
         },
         {
           "label": "GitHub",
-          "href": "@githubPackage",
+          "href": "@githubPackage/blob/main/notebooks/tutorial/Learning-Tutorial.ipynb",
           "icon": "github"
         }
       ]
     },
     {
-      "title": "Labore et dolore",
-      "text": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+      "title": "Analyze & Export",
+      "text": "Visualize results, compare experiments, and export features and models for reproducibility and clinical research.",
       "image": {
-        "src": "/images/screens/screen-panel.webp",
-        "alt": "Lorem ipsum placeholder screenshot",
-        "width": 1500,
-        "height": 950
+        "src": "/images/screens/results-analysis.webp",
+        "alt": "Comparing experiment results in MEDiml",
+        "width": 1173,
+        "height": 619
       },
       "links": [
         {
           "label": "Documentation",
-          "href": "@docsApp",
+          "href": "@docsApp/demonstration",
           "icon": "book"
         },
         {
-          "label": "Tutorial",
-          "href": "@playlist",
+          "label": "Tutorials",
+          "href": "https://www.youtube.com/watch?v=-6lYVOfyebE",
           "icon": "play"
         },
         {
           "label": "GitHub",
-          "href": "@githubPackage",
+          "href": "@githubPackage/blob/main/notebooks/tutorial/Learning-Tutorial.ipynb",
           "icon": "github"
         }
       ]

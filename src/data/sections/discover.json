@@ -1,28 +1,28 @@
 {
   "$schema": "../_shared/schemas/sections/discover.schema.json",
   "id": "discover",
-  "title": "Lorem ipsum dolor *sit amet*",
-  "text": "Watch our introduction video: lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor with {name}.",
+  "title": "Transform Medical Images into *Insights*",
+  "text": "Watch our introduction video to learn how {name} streamlines radiomics analysis with its powerful dual-component architecture.",
   "video": {
-    "youtube": "aqz-KE-bpKQ",
+    "youtube": "h38vEpkHSpc",
     "title": "{name} introduction video",
     "caption": "Introducing {name}"
   },
   "items": [
     {
-      "title": "Lorem ipsum",
-      "text": "Dolor sit amet, consectetur adipiscing elit sed do",
+      "title": "Code-Free Interface",
+      "text": "Intuitive drag-and-drop interface for medical image analysis",
       "mark": "underline"
     },
     {
-      "title": "Dolor sit amet",
-      "text": "Ut enim ad minim veniam, quis nostrud exercitation",
+      "title": "Python Package",
+      "text": "Flexible code-based solution for advanced customization",
       "mark": "underline"
     },
     {
-      "title": "Consectetur elit",
-      "href": "https://example.com/standard",
-      "text": "Duis aute irure dolor in reprehenderit in voluptate",
+      "title": "IBSI Compliant",
+      "href": "@ibsi",
+      "text": "Adheres to international radiomics extraction standards",
       "mark": "underline"
     }
   ]

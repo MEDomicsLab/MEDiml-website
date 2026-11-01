@@ -2,27 +2,27 @@
   "$schema": "../_shared/schemas/sections/steps.schema.json",
   "id": "steps",
   "align": "center",
-  "title": "Lorem ipsum in {count} steps",
-  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+  "title": "Radiomics Analysis in {count} Steps",
+  "text": "Load images, configure extraction, extract IBSI-compliant features, and train models for clinical insights.",
   "items": [
     {
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit with {name}.",
+      "title": "Load Medical Images",
+      "text": "Import DICOM or NIfTI scans with their segmentation masks into {name}.",
       "mark": "loop"
     },
     {
-      "title": "Dolor sit amet",
-      "text": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "title": "Configure & Extract",
+      "text": "Set up radiomics feature extraction parameters and run feature extraction on single scans or entire datasets.",
       "mark": "wave"
     },
     {
-      "title": "Consectetur elit",
-      "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      "title": "Train & Export",
+      "text": "Build predictive models and export results for clinical research.",
       "mark": "circle"
     },
     {
-      "title": "Tempor incididunt",
-      "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      "title": "Generate Code",
+      "text": "Turn your graphical workflow into executable code for reproducibility and collaboration.",
       "mark": "check"
     }
   ],

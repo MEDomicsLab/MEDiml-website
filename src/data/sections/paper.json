@@ -2,81 +2,82 @@
   "$schema": "../_shared/schemas/sections/paper.schema.json",
   "id": "paper",
   "title": "The *research* behind {name}",
-  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "text": "Explore the methodology that powers {name}, published on arXiv and developed to simplify radiomics predictive modeling.",
   "papers": [
     {
       "label": "Software paper",
-      "reference": "arXiv:0000.00000",
-      "title": "Lorem Ipsum Dolor Sit Amet: Consectetur Adipiscing Elit",
-      "authors": "Lorem Ipsum, Dolor Sit et al.",
-      "venue": "Lorem Ipsum (lo.IP) · Dolor Sit (do.SA)",
-      "abstract": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "reference": "arXiv:2610.37715",
+      "title": "Medical Image Analysis with Machine Learning (MEDiml): Strategies for Simpler Radiomics",
+      "authors": "Mahdi Ait Lhaj Loutfi, Simon Provost et al.",
+      "venue": "Image and Video Processing (eess.IV) · Medical Physics (physics.med-ph)",
+      "abstract": "MEDiml combines a Python package ({name}-pkg) and a graphical desktop application ({name}-app) for radiomics workflows. The two interfaces share a computational engine, and users can export workflows built in the desktop interface as Python code. Feature extraction follows IBSI standards. The software compares models built from progressively more complex feature groups and selects the simplest group whose performance is not significantly surpassed. Across five oncological datasets containing 2,104 scans, reported AUCs ranged from 0.65 to 0.82; shape or intensity features were sufficient for four tasks.",
       "actions": [
         {
           "label": "Download PDF",
-          "href": "@paperPdf",
+          "href": "@softwarePaperPdf",
           "variant": "primary",
           "icon": "download"
         },
         {
-          "label": "Read online",
-          "href": "@paper"
+          "label": "View on arXiv",
+          "href": "@softwarePaper"
         }
       ],
       "pdf": {
-        "src": "@paperPdf",
-        "name": "lorem-ipsum.pdf",
-        "note": "If the PDF does not load in your browser, use [Download PDF](@paperPdf) or read it [online](@paper)."
+        "src": "@softwarePaperPdf",
+        "name": "2610.37715.pdf",
+        "open": "Open",
+        "note": "If the PDF does not load in your browser, use [Download PDF](@softwarePaperPdf) or view it on [arXiv](@softwarePaper)."
       }
     },
     {
-      "label": "Reference manual",
-      "reference": "arXiv:0000.00001",
-      "title": "Reference Manual of {name}",
-      "authors": "Lorem Ipsum, Dolor Sit et al.",
-      "venue": "Lorem Ipsum (lo.IP)",
-      "abstract": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+      "reference": "arXiv:2610.29666",
+      "title": "Reference Manual of MEDiml",
+      "authors": "Mahdi Ait Lhaj Loutfi, Simon Provost et al.",
+      "venue": "Software Engineering (cs.SE) · Medical Physics (physics.med-ph)",
+      "abstract": "This reference manual presents MEDiml, an open-source radiomics platform combining a Python package ({name}-pkg) and a graphical desktop application ({name}-app). Both interfaces share the same computational implementation, with graphical workflows exportable as Python code. The manual covers radiomics concepts, image preprocessing, feature extraction, predictive modeling and interpretation, alongside the software architecture and installation. It compares MEDiml with existing tools and illustrates how different levels of radiomic complexity affect predictive performance across five oncological imaging cohorts comprising 2,104 scans.",
       "actions": [
         {
           "label": "Download PDF",
-          "href": "@paperPdf",
+          "href": "@referenceManualPdf",
           "variant": "primary",
           "icon": "download"
         },
         {
-          "label": "Read online",
-          "href": "@paper"
+          "label": "Read on arXiv",
+          "href": "@referenceManual"
         }
       ],
       "pdf": {
-        "src": "@paperPdf",
-        "name": "lorem-manual.pdf",
-        "note": "If the PDF does not load in your browser, use [Download PDF](@paperPdf) or read it [online](@paper)."
-      }
+        "src": "@referenceManualPdf",
+        "name": "2610.29666v1.pdf",
+        "open": "Open",
+        "note": "If the PDF does not load in your browser, use [Download PDF](@referenceManualPdf) or read the [HTML version](@referenceManual)."
+      },
+      "label": "Reference manual"
     },
     {
-      "label": "Study",
-      "reference": "arXiv:0000.00002",
-      "title": "Nemo Enim Ipsam Voluptatem: Quia Voluptas Sit Aspernatur",
-      "authors": "Ipsum et al.",
-      "venue": "Dolor Sit (do.SA)",
-      "abstract": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+      "reference": "arXiv:2407.04888",
+      "title": "Unraveling Radiomics Complexity: Strategies for Optimal Simplicity in Predictive Modeling",
+      "authors": "Loutfi et al.",
+      "venue": "Image and Video Processing (eess.IV)",
+      "abstract": "The high dimensionality of radiomic feature sets and potentially high computational requirements underscore the need for an effective method to identify the smallest set of predictive features. This work develops a methodology and tools ({name}) to identify and explain the smallest set of predictive radiomic features across five cancer datasets (n=2,104), estimating the optimal radiomics complexity level for specific medical outcomes.",
       "blocks": [
         {
-          "title": "Lorem",
-          "content": "5 ipsum"
+          "title": "Datasets",
+          "content": "5 cancer cohorts"
         },
         {
-          "title": "Dolor",
-          "content": "1,234"
+          "title": "Patients",
+          "content": "2,104"
         },
         {
-          "title": "Sit amet",
-          "content": "56,789 elit"
+          "title": "Features",
+          "content": "89,714 extracted"
         },
         {
           "title": "Subject",
-          "content": "lo.IP / do.SA"
+          "content": "eess.IV / cs.CV"
         }
       ],
       "actions": [
@@ -87,15 +88,17 @@
           "icon": "download"
         },
         {
-          "label": "Read online",
-          "href": "@paper"
+          "label": "View on arXiv",
+          "href": "@arxiv"
         }
       ],
       "pdf": {
         "src": "@paperPdf",
-        "name": "lorem-study.pdf",
-        "note": "If the PDF does not load in your browser, use [Download PDF](@paperPdf) or read it [online](@paper)."
-      }
+        "name": "2407.04888.pdf",
+        "open": "Open",
+        "note": "If the PDF does not load in your browser, use [Download PDF](@paperPdf) or view it on [arXiv](@arxiv)."
+      },
+      "label": "Scientific study"
     }
   ]
 }

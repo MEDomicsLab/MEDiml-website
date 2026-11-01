@@ -1,8 +1,8 @@
 {
   "$schema": "../_shared/schemas/sections/download.schema.json",
   "id": "download",
-  "title": "Lorem ipsum *now*",
-  "text": "Use {name}-pkg as a Python package or install the {name}-app desktop application. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+  "title": "Analyze your images *now*",
+  "text": "Use {name}-pkg as a Python package or install the {name}-app desktop application. No Python knowledge required: enjoy an all-in-one interface for medical image analysis with drag-drop style feature extraction and model training.",
   "download": {
     "title": "{name}-app",
     "release": "v{version}, pre-release",
@@ -11,19 +11,19 @@
         "label": "Windows",
         "file": ".exe",
         "os": "windows",
-        "href": "@releases/MEDxxx-app-{version}-win.exe"
+        "href": "@releases/MEDiml-app-{version}-win.exe"
       },
       {
         "label": "macOS",
         "file": ".dmg",
         "os": "mac",
-        "href": "@releases/MEDxxx-app-{version}-mac.dmg"
+        "href": "@releases/MEDiml-app-{version}-mac.dmg"
       },
       {
         "label": "Linux",
         "file": ".deb",
         "os": "linux",
-        "href": "@releases/MEDxxx-app-{version}-linux.deb"
+        "href": "@releases/MEDiml-app-{version}-ubuntu.deb"
       }
     ],
     "links": [
@@ -45,9 +45,9 @@
     "title": "Troubleshooting",
     "items": [
       {
-        "title": "Lorem ipsum: required step",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Before opening {name}-app, run this command in the Terminal:",
-        "code": "sudo xattr -cr /Applications/MEDxxx-app.app",
+        "title": "macOS users: required step",
+        "text": "{name}-app is not notarized by Apple. After installing the app and before opening it, run this command in the Terminal:",
+        "code": "sudo xattr -cr /Applications/MEDiml-app.app",
         "language": "bash"
       }
     ],

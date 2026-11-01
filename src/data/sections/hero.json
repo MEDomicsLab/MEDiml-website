@@ -2,60 +2,60 @@
   "$schema": "../_shared/schemas/sections/hero.schema.json",
   "id": "top",
   "layout": "split",
-  "title": "Lorem ipsum\ndolor *sit*\namet elit",
-  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam with {name}.",
+  "title": "MEDical Image\nanalysis *with*\nMachine Learning",
+  "text": "An all-in-one open-source software designed to enhance synergy between computer scientists and clinical researchers in the field of radiomics. Transform medical images into insightful knowledge: explore, analyze, and extract with {name}.",
   "actions": [
     {
-      "label": "Get started",
+      "label": "Get Started",
       "href": "@docsApp",
       "variant": "primary"
     },
     {
-      "label": "Watch tutorials",
+      "label": "Explore Tutorials",
       "href": "@playlist",
       "icon": "play"
     }
   ],
-  "badges": ["Lorem ipsum dolor", "Sit amet elit"],
+  "badges": ["IBSI-Compliant Feature Extraction", "No Coding Required"],
   "media": [
     {
-      "src": "/images/screens/screen-wide.webp",
-      "alt": "Lorem ipsum placeholder screenshot",
-      "width": 1600,
-      "height": 1000
+      "src": "/images/screens/learning-pipeline.webp",
+      "alt": "A MEDiml learning pipeline assembled from drag-and-drop nodes",
+      "width": 1859,
+      "height": 992
     },
     {
-      "src": "/images/screens/screen-square.webp",
-      "alt": "Lorem ipsum placeholder detail",
-      "width": 640,
-      "height": 640
+      "src": "/images/screens/image-viewer.webp",
+      "alt": "A 3D glioma MR volume opened in the MEDiml image viewer",
+      "width": 599,
+      "height": 603
     }
   ],
   "partners": {
     "label": "In partnership with",
     "items": [
       {
-        "name": "Lorem",
-        "logo": "/images/partners/lorem.webp",
-        "logoDark": "/images/partners/lorem-white.webp",
-        "href": "https://example.com/lorem"
+        "name": "MEDomicsLab",
+        "logo": "/images/partners/medomicslab.webp",
+        "logoDark": "/images/partners/medomicslab-white.webp",
+        "href": "@lab"
       },
       {
-        "name": "Ipsum",
-        "logo": "/images/partners/ipsum.webp",
-        "logoDark": "/images/partners/ipsum-white.webp",
-        "href": "https://example.com/ipsum"
+        "name": "Université de Sherbrooke",
+        "logo": "/images/partners/udes.webp",
+        "logoDark": "/images/partners/udes-white.webp",
+        "href": "https://www.usherbrooke.ca/"
       },
       {
-        "name": "Dolor",
-        "logo": "/images/partners/dolor.webp",
-        "logoDark": "/images/partners/dolor-white.webp",
-        "href": "https://example.com/dolor"
+        "name": "McGill University",
+        "logo": "/images/partners/mcgill.webp",
+        "logoDark": "/images/partners/mcgill.webp",
+        "href": "https://www.mcgill.ca/"
       },
       {
-        "name": "Amet",
-        "logo": "/images/partners/amet.webp",
-        "logoDark": "/images/partners/amet-white.webp"
+        "name": "Unité de soutien SSA Québec",
+        "logo": "/images/partners/unite-ssa.webp",
+        "logoDark": "/images/partners/unite-ssa-white.webp"
       }
     ]
   },

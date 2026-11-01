@@ -2,19 +2,19 @@
   "$schema": "../_shared/schemas/sections/learn.schema.json",
   "id": "tutorials",
   "title": "Learn {name}, *two ways*",
-  "text": "Lorem ipsum videos for {name}-app, dolor sit amet guides for {name}-pkg.",
+  "text": "Guided videos for {name}-app, step-by-step guides for {name}-pkg.",
   "tracks": [
     {
-      "title": "Learn {name}-app with guided videos",
+      "title": "Learn {name}-app with Guided Videos",
       "meta": "Desktop application",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "text": "Watch the full {name}-app playlist for a step-by-step introduction, from loading medical images and radiomics feature extraction to model training and results analysis.",
       "video": {
-        "youtube": "aqz-KE-bpKQ",
-        "title": "{name}-app tutorial",
-        "caption": "Lorem ipsum tutorial"
+        "playlist": "PLEPy2VhC4-D5Eg-UxRyTtmUZRh-D5m_Ru",
+        "title": "{name}-app - Complete Tutorial Playlist",
+        "caption": "Complete tutorial playlist"
       },
       "action": {
-        "label": "Watch on YouTube",
+        "label": "Watch Full Playlist on YouTube",
         "href": "@playlist",
         "icon": "youtube"
       }
@@ -22,42 +22,42 @@
     {
       "title": "Learn {name}-pkg, step by step",
       "meta": "Python package",
-      "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris, from pip install to lorem ipsum.",
+      "text": "Follow focused, practical guides to get {name}-pkg running, from pip install to radiomics feature extraction and model training.",
       "install": {
-        "code": "pip install medxxx",
+        "code": "pip install MEDiml",
         "language": "bash"
       },
       "linkLabel": "Open tutorial",
       "items": [
         {
-          "title": "Install {name}-pkg",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "href": "@docsPackage/tutorial-1"
+          "title": "Install {name}-pkg (Python)",
+          "text": "Set up a virtual environment and install {name}-pkg via pip in minutes.",
+          "href": "@docsPackage/en/latest/Installation.html"
         },
         {
           "title": "Prepare your data",
-          "text": "Sed do eiusmod tempor incididunt ut labore et dolore.",
-          "href": "@docsPackage/tutorial-2"
+          "text": "Prepare and organize your DICOM and NIfTI scans with segmentation masks.",
+          "href": "@docsPackage/en/latest/input_data.html"
         },
         {
-          "title": "Configure lorem",
-          "text": "Ut enim ad minim veniam, quis nostrud exercitation.",
-          "href": "@docsPackage/tutorial-3"
+          "title": "Configure Extraction",
+          "text": "Set up IBSI-compliant radiomics feature extraction parameters.",
+          "href": "@docsPackage/en/latest/configurations_file.html"
         },
         {
-          "title": "Dolor manager",
-          "text": "Duis aute irure dolor in reprehenderit in voluptate.",
-          "href": "@docsPackage/tutorial-4"
+          "title": "Data Manager",
+          "text": "Convert your DICOM and NIfTI data into manageable binary files.",
+          "href": "@docsPackage/en/latest/tutorials.html#datamanager"
         },
         {
-          "title": "Batch ipsum",
-          "text": "Excepteur sint occaecat cupidatat non proident.",
-          "href": "@docsPackage/tutorial-5"
+          "title": "Batch Extractor",
+          "text": "Run batch extraction on individual scans or entire datasets.",
+          "href": "@docsPackage/en/latest/tutorials.html#batchextractor"
         },
         {
-          "title": "Sit amet models",
-          "text": "Sed ut perspiciatis unde omnis iste natus error.",
-          "href": "@docsPackage/tutorial-6"
+          "title": "Machine Learning",
+          "text": "Train and evaluate machine learning models using the extracted features.",
+          "href": "@docsPackage/en/latest/tutorials.html#learning"
         }
       ]
     }

@@ -1,39 +1,47 @@
 {
   "$schema": "./_shared/schemas/site.schema.json",
   "brand": {
-    "name": "MEDxxx",
-    "version": "0.1.0",
+    "name": "MEDiml",
+    "version": "0.9.0",
     "logo": "/images/brand/logo.webp",
     "logoInverse": "/images/brand/logo-white.webp",
-    "logoAlt": "MEDxxx logo",
-    "favicon": "/favicon.png",
+    "logoAlt": "MEDiml logo",
+    "favicon": "/images/brand/mediml-icon.webp",
     "touchIcon": "/apple-touch-icon.png"
   },
   "links": {
-    "docsApp": "https://example.com/docs/app",
-    "quickStart": "https://example.com/docs/app/quick-start",
-    "docsPackage": "https://example.com/docs/package",
-    "githubApp": "https://github.com/MEDomicsLab",
-    "githubPackage": "https://github.com/MEDomicsLab",
-    "issues": "https://example.com/issues",
-    "releases": "https://example.com/releases/v{version}",
-    "playlist": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
-    "discord": "https://example.com/discord",
+    "docsApp": "https://medomicslab.gitbook.io/mediml-app-docs",
+    "quickStart": "https://medomicslab.gitbook.io/mediml-app-docs/quick-start",
+    "docsPackage": "https://mediml.readthedocs.io/",
+    "githubApp": "https://github.com/MEDomicsLab/MEDiml-app",
+    "githubPackage": "https://github.com/MEDomicsLab/MEDiml",
+    "issues": "https://github.com/MEDomicsLab/MEDiml-app/issues",
+    "notebooks": "https://github.com/MEDomicsLab/MEDiml/tree/main/notebooks",
+    "releases": "https://github.com/MEDomicsLab/MEDiml-app/releases/download/v{version}",
+    "pypi": "https://pypi.org/project/MEDimage/",
+    "playlist": "https://youtube.com/playlist?list=PLEPy2VhC4-D5Eg-UxRyTtmUZRh-D5m_Ru",
+    "discord": "https://discord.com/invite/ZbaGj8E6mP",
+    "ibsi": "https://theibsi.github.io/",
     "lab": "https://medomicslab.com/",
-    "paper": "https://example.com/paper",
-    "paperPdf": "/docs/lorem-ipsum.pdf",
+    "medomics": "https://medomics.app/",
+    "arxiv": "https://arxiv.org/abs/2407.04888",
+    "paperPdf": "https://arxiv.org/pdf/2407.04888.pdf",
+    "referenceManual": "https://arxiv.org/html/2610.29666v1",
+    "referenceManualPdf": "https://arxiv.org/pdf/2610.29666v1",
     "youtubeApi": "https://www.youtube.com/iframe_api",
-    "youtubeEmbed": "https://www.youtube-nocookie.com/embed/"
+    "youtubeEmbed": "https://www.youtube-nocookie.com/embed/",
+    "softwarePaper": "https://arxiv.org/abs/2610.37715",
+    "softwarePaperPdf": "https://arxiv.org/pdf/2610.37715"
   },
   "seo": {
-    "siteUrl": "https://example.com",
-    "siteName": "MEDxxx",
+    "siteUrl": "https://www.mediml.app",
+    "siteName": "MEDiml",
     "homeTitle": "Home",
-    "titleTemplate": "%s | MEDxxx | Lorem ipsum",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "titleTemplate": "%s | MEDiml | Radiomics analysis",
+    "description": "An all-in-one open-source software for radiomics analysis and medical image feature extraction",
     "image": {
       "src": "/images/og.png",
-      "alt": "MEDxxx, lorem ipsum dolor sit amet",
+      "alt": "MEDiml, medical image analysis with machine learning",
       "width": 1200,
       "height": 630
     },
@@ -50,8 +58,8 @@
   },
   "banner": {
     "enabled": true,
-    "id": "lorem-ipsum",
-    "text": "{name} lorem ipsum dolor sit amet, **consectetur** adipiscing elit.",
+    "id": "formerly-medimage",
+    "text": "{name} was formerly known as **MEDimage**. Same great tool, new name!",
     "dismissible": true
   },
   "nav": {
@@ -62,18 +70,18 @@
           {
             "label": "{name}-app",
             "href": "@docsApp",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            "text": "An all-in-one interface for medical image analysis with drag-drop style feature extraction and model training.",
             "icon": "laptop"
           },
           {
             "label": "{name}-pkg",
             "href": "@docsPackage",
-            "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+            "text": "Use {name}-pkg for radiomics analysis and medical image feature extraction in Python.",
             "icon": "code"
           }
         ],
         "title": "Documentation",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "text": "Explore the {name}-app desktop interface or the {name}-pkg Python package."
       },
       {
         "label": "Paper",
@@ -90,6 +98,10 @@
       {
         "label": "Tutorials",
         "to": "/#tutorials"
+      },
+      {
+        "label": "IBSI",
+        "href": "@ibsi"
       },
       {
         "label": "Our Lab",
@@ -118,15 +130,15 @@
         "title": "Resources",
         "links": [
           {
-            "label": "App documentation",
+            "label": "App Documentation",
             "href": "@docsApp"
           },
           {
-            "label": "Code documentation",
+            "label": "Code Documentation",
             "href": "@docsPackage"
           },
           {
-            "label": "Video tutorials",
+            "label": "Video Tutorials",
             "href": "@playlist"
           }
         ]
@@ -135,15 +147,15 @@
         "title": "Community",
         "links": [
           {
-            "label": "GitHub (package)",
+            "label": "GitHub (Package)",
             "href": "@githubPackage"
           },
           {
-            "label": "GitHub (app)",
+            "label": "GitHub (App)",
             "href": "@githubApp"
           },
           {
-            "label": "Report issues",
+            "label": "Report Issues",
             "href": "@issues"
           }
         ]
@@ -151,7 +163,7 @@
     ],
     "wordmark": "{name}",
     "note": {
-      "label": "Copyright © 2026 · All Rights Reserved"
+      "label": "Copyright © 2026 · All Right Reserved"
     },
     "credit": {
       "label": "Designed by Simon",
