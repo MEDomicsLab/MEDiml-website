@@ -1,0 +1,25 @@
+.highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--hl-w, 0px);
+  height: var(--hl-h, 0px);
+  translate: var(--hl-x, 0px) var(--hl-y, 0px);
+  border-radius: var(--radius);
+  background: var(--color-highlight);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    translate 0.55s var(--ease-out-expo),
+    width 0.55s var(--ease-out-expo),
+    height 0.55s var(--ease-out-expo);
+}
+
+.highlight[data-on] {
+  opacity: 1;
+}
+
+.highlight[data-snap] {
+  transition: opacity 0.3s ease;
+}

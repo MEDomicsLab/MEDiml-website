@@ -1,0 +1,65 @@
+.header {
+  display: grid;
+  gap: 24px;
+  margin-bottom: var(--section-header-space);
+}
+
+.title {
+  font-size: var(--text-h2);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+  max-width: 15ch;
+}
+
+.title em {
+  letter-spacing: -0.035em;
+}
+
+.side {
+  display: grid;
+  gap: 24px;
+  justify-items: start;
+}
+
+.text {
+  max-width: 46ch;
+  font-size: var(--text-lead);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--color-muted);
+  text-wrap: pretty;
+}
+
+.center {
+  justify-items: center;
+  text-align: center;
+}
+
+.center .side {
+  justify-items: center;
+}
+
+.center .title {
+  max-width: 18ch;
+}
+
+.center .text {
+  max-width: 54ch;
+}
+
+@media (min-width: 1012px) {
+  .split {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: end;
+    gap: 48px;
+  }
+
+  .split .side {
+    align-self: end;
+  }
+
+  .split .text {
+    margin-bottom: 0.3em;
+  }
+}

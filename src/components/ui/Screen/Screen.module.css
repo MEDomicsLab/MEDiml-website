@@ -1,0 +1,50 @@
+.screen {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-document);
+  box-shadow:
+    0 0 0 1px var(--color-stage-line),
+    var(--shadow-window);
+}
+
+.screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.mat {
+  position: relative;
+  display: grid;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.surface {
+  background: var(--color-surface);
+}
+
+.bleed {
+  align-self: start;
+  justify-self: center;
+  width: 84%;
+  margin-top: 8%;
+  box-shadow:
+    0 0 0 1px var(--color-stage-line),
+    0 30px 60px -20px var(--color-stage-shadow);
+}
+
+.contain {
+  place-self: center;
+  height: 82%;
+  width: auto;
+  aspect-ratio: auto;
+}
+
+.contain img {
+  width: auto;
+  height: 100%;
+}

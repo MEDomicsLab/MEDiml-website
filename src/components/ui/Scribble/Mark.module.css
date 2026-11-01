@@ -1,0 +1,49 @@
+.mark {
+  position: absolute;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.mark path {
+  stroke: var(--color-stroke);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.45s var(--ease-in-out);
+}
+
+.underline {
+  left: -3%;
+  bottom: -0.36em;
+  width: 106%;
+  height: 0.42em;
+}
+
+.circle {
+  left: -9%;
+  top: -24%;
+  width: 118%;
+  height: 148%;
+}
+
+.check {
+  right: calc(-1.05em - 6px);
+  top: 0.02em;
+  width: 0.95em;
+  height: 0.95em;
+}
+
+:global([data-mark-host]):is(:hover, :focus-visible, [data-active]) .hover path,
+:global([data-mark-host])[data-active] .active path {
+  stroke-dashoffset: 0;
+  transition-duration: 0.9s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mark path {
+    transition: none;
+  }
+}
