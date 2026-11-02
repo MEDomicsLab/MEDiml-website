@@ -2,22 +2,64 @@
   "$schema": "../_shared/schemas/sections/learn.schema.json",
   "id": "tutorials",
   "title": "Learn {name}, *two ways*",
-  "text": "Guided videos for {name}-app, step-by-step guides for {name}-pkg.",
+  "text": "Guided videos and a hands-on proof of concept for {name}-app, step-by-step guides for {name}-pkg.",
   "tracks": [
     {
-      "title": "Learn {name}-app with Guided Videos",
+      "title": "Learn {name}-app",
       "meta": "Desktop application",
-      "text": "Watch the full {name}-app playlist for a step-by-step introduction, from loading medical images and radiomics feature extraction to model training and results analysis.",
-      "video": {
-        "playlist": "PLEPy2VhC4-D5Eg-UxRyTtmUZRh-D5m_Ru",
-        "title": "{name}-app - Complete Tutorial Playlist",
-        "caption": "Complete tutorial playlist"
-      },
-      "action": {
-        "label": "Watch Full Playlist on YouTube",
-        "href": "@playlist",
-        "icon": "youtube"
-      }
+      "tabs": [
+        {
+          "label": "Guided Videos",
+          "text": "Watch the full {name}-app playlist for a step-by-step introduction, from loading medical images and radiomics feature extraction to model training and results analysis.",
+          "video": {
+            "playlist": "PLEPy2VhC4-D5Eg-UxRyTtmUZRh-D5m_Ru",
+            "title": "{name}-app - Complete Tutorial Playlist",
+            "caption": "Complete tutorial playlist"
+          },
+          "action": {
+            "label": "Watch Full Playlist on YouTube",
+            "href": "@playlist",
+            "icon": "youtube"
+          }
+        },
+        {
+          "label": "Proof of Concept",
+          "text": "Reproduce a published radiomics study on public data: predict lung metastases in soft-tissue sarcoma patients from pre-treatment PET, CT and MRI scans of the TCIA Soft-Tissue-Sarcoma collection.",
+          "linkLabel": "Open guide",
+          "items": [
+            {
+              "title": "Single Scan Extraction",
+              "text": "Explore one patient's scans and extract radiomics features from a single image.",
+              "href": "@docsApp/soft-tissue-sarcoma-poc/1.-single-scan-extraction"
+            },
+            {
+              "title": "Radiomics Pre-checks",
+              "text": "Load the dataset in the DataManager and review it before extraction.",
+              "href": "@docsApp/soft-tissue-sarcoma-poc/2.-datamanager-radiomics-pre-checks"
+            },
+            {
+              "title": "Batch Extraction",
+              "text": "Extract features for every patient and imaging modality in one run.",
+              "href": "@docsApp/soft-tissue-sarcoma-poc/3.-batchextractor"
+            },
+            {
+              "title": "Learning Module",
+              "text": "Train and evaluate models that predict lung metastasis risk.",
+              "href": "@docsApp/soft-tissue-sarcoma-poc/4.-learning-module"
+            },
+            {
+              "title": "Results Analysis",
+              "text": "Compare modalities and feature families against the original study.",
+              "href": "@docsApp/soft-tissue-sarcoma-poc/5.-results-analysis-and-discussion"
+            }
+          ],
+          "action": {
+            "label": "Start the Proof of Concept",
+            "href": "@docsApp/soft-tissue-sarcoma-poc",
+            "icon": "book"
+          }
+        }
+      ]
     },
     {
       "title": "Learn {name}-pkg, step by step",
