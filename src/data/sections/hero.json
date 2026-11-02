@@ -16,10 +16,10 @@
       "icon": "play"
     }
   ],
-  "badges": ["IBSI-Compliant Feature Extraction", "No Coding Required"],
+  "badges": ["IBSI-Compliant Radiomics Analysis", "No Coding Required"],
   "media": [
     {
-      "src": "/images/screens/learning-pipeline.webp",
+      "src": "/images/screens/MEDiml-GUI.png",
       "alt": "A MEDiml learning pipeline assembled from drag-and-drop nodes",
       "width": 1859,
       "height": 992

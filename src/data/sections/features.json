@@ -8,7 +8,7 @@
       "title": "Load Medical Images",
       "text": "Import DICOM or NIfTI scans along with segmentation masks. {name} supports widely used medical imaging formats.",
       "image": {
-        "src": "/images/screens/data-manager.webp",
+        "src": "/images/screens/data-manager.png",
         "alt": "Loading medical images in the MEDiml data manager",
         "width": 1579,
         "height": 1016
@@ -25,9 +25,9 @@
           "icon": "play"
         },
         {
-          "label": "GitHub",
-          "href": "@githubPackage",
-          "icon": "github"
+          "label": "Colab Notebook",
+          "href": "https://colab.research.google.com/github/MEDomicsLab/MEDiml-pkg/blob/main/notebooks/tutorial/DataManager-Tutorial.ipynb",
+          "icon": "colab"
         }
       ]
     },
@@ -52,9 +52,9 @@
           "icon": "play"
         },
         {
-          "label": "GitHub",
-          "href": "@githubPackage",
-          "icon": "github"
+          "label": "Colab Notebook",
+          "href": "https://colab.research.google.com/github/MEDomicsLab/MEDiml-pkg/blob/main/notebooks/tutorial/DataManager-Tutorial.ipynb",
+          "icon": "colab"
         }
       ]
     },
@@ -62,42 +62,15 @@
       "title": "Configure Extraction",
       "text": "Set up IBSI-compliant radiomics feature extraction parameters. Customize filters, discretization, and feature families.",
       "image": {
-        "src": "/images/screens/extraction-settings.webp",
+        "src": "/images/screens/Extract-Features.png",
         "alt": "Choosing radiomics feature families in MEDiml",
         "width": 1513,
         "height": 957
       },
       "links": [
         {
-          "label": "Code documentation",
-          "href": "@docsPackage/en/latest/configurations_file.html",
-          "icon": "book"
-        },
-        {
-          "label": "IBSI standards",
-          "href": "@ibsi",
-          "icon": "shield"
-        },
-        {
-          "label": "Settings",
-          "href": "@notebooks/tutorial/settings",
-          "icon": "github"
-        }
-      ]
-    },
-    {
-      "title": "Extract Features",
-      "text": "Run batch extraction on individual scans or entire datasets. Features are computed following the IBSI workflow.",
-      "image": {
-        "src": "/images/screens/extraction-pipeline.webp",
-        "alt": "A MEDiml radiomics extraction pipeline",
-        "width": 1479,
-        "height": 926
-      },
-      "links": [
-        {
           "label": "Documentation",
-          "href": "@docsApp/radiomics/feature-extraction",
+          "href": "https://medomicslab.gitbook.io/mediml-app-docs/radiomics/feature-extraction/single-scan",
           "icon": "book"
         },
         {
@@ -106,9 +79,31 @@
           "icon": "play"
         },
         {
-          "label": "GitHub",
-          "href": "@githubPackage/blob/main/notebooks/tutorial/BatchExtractor-Tutorial.ipynb",
-          "icon": "github"
+          "label": "Colab Notebook",
+          "href": "https://colab.research.google.com/github/MEDomicsLab/MEDiml-pkg/blob/main/notebooks/demo/Glioma-Demo.ipynb",
+          "icon": "colab"
+        }
+      ]
+    },
+    {
+      "title": "Extract Features",
+      "text": "Run batch extraction on individual scans or entire datasets. Features are computed following the IBSI workflow.",
+      "image": {
+        "src": "/images/screens/batch-extractor-with-settings-editor.png",
+        "alt": "A MEDiml radiomics extraction pipeline",
+        "width": 1479,
+        "height": 926
+      },
+      "links": [
+        {
+          "label": "WHAT IS A CONFIGURATION FILE?",
+          "href": "@docsPackage/en/latest/configurations_file.html",
+          "icon": "book"
+        },
+        {
+          "label": "IBSI standards",
+          "href": "@ibsi",
+          "icon": "shield"
         }
       ]
     },
@@ -116,7 +111,7 @@
       "title": "Train Models",
       "text": "Use extracted features to train predictive models. {name} offers tailored functionalities for model training and validation.",
       "image": {
-        "src": "/images/screens/learning-pipeline.webp",
+        "src": "/images/screens/ml_scene.png",
         "alt": "A MEDiml model training pipeline",
         "width": 1859,
         "height": 992
@@ -133,9 +128,9 @@
           "icon": "play"
         },
         {
-          "label": "GitHub",
-          "href": "@githubPackage/blob/main/notebooks/tutorial/Learning-Tutorial.ipynb",
-          "icon": "github"
+          "label": "Colab Notebook",
+          "href": "https://colab.research.google.com/github/MEDomicsLab/MEDiml-pkg/blob/main/notebooks/tutorial/Learning-Tutorial.ipynb",
+          "icon": "colab"
         }
       ]
     },
@@ -143,7 +138,7 @@
       "title": "Analyze & Export",
       "text": "Visualize results, compare experiments, and export features and models for reproducibility and clinical research.",
       "image": {
-        "src": "/images/screens/results-analysis.webp",
+        "src": "/images/screens/results-analysis.jpg",
         "alt": "Comparing experiment results in MEDiml",
         "width": 1173,
         "height": 619

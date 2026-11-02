@@ -14,9 +14,9 @@
     "quickStart": "https://medomicslab.gitbook.io/mediml-app-docs/quick-start",
     "docsPackage": "https://mediml.readthedocs.io/",
     "githubApp": "https://github.com/MEDomicsLab/MEDiml-app",
-    "githubPackage": "https://github.com/MEDomicsLab/MEDiml",
+    "githubPackage": "https://github.com/MEDomicsLab/MEDiml-pkg",
     "issues": "https://github.com/MEDomicsLab/MEDiml-app/issues",
-    "notebooks": "https://github.com/MEDomicsLab/MEDiml/tree/main/notebooks",
+    "notebooks": "https://github.com/MEDomicsLab/MEDiml-pkg/tree/main/notebooks",
     "releases": "https://github.com/MEDomicsLab/MEDiml-app/releases/download/v{version}",
     "pypi": "https://pypi.org/project/MEDimage/",
     "playlist": "https://youtube.com/playlist?list=PLEPy2VhC4-D5Eg-UxRyTtmUZRh-D5m_Ru",
@@ -147,11 +147,11 @@
         "title": "Community",
         "links": [
           {
-            "label": "GitHub (Package)",
+            "label": "GitHub (MEDiml-pkg)",
             "href": "@githubPackage"
           },
           {
-            "label": "GitHub (App)",
+            "label": "GitHub (MEDiml-app)",
             "href": "@githubApp"
           },
           {

@@ -2,7 +2,7 @@
   "$schema": "../_shared/schemas/sections/download.schema.json",
   "id": "download",
   "title": "Analyze your images *now*",
-  "text": "Use {name}-pkg as a Python package or install the {name}-app desktop application. No Python knowledge required: enjoy an all-in-one interface for medical image analysis with drag-drop style feature extraction and model training.",
+  "text": "Use {name}-pkg as a Python package or install the {name}-app desktop application. No Python knowledge required: enjoy an all-in-one interface for medical image analysis with drag-drop style radiomics analysis.",
   "download": {
     "title": "{name}-app",
     "release": "v{version}, pre-release",
@@ -30,14 +30,6 @@
       {
         "label": "Install guide",
         "href": "@quickStart"
-      },
-      {
-        "label": "Docs",
-        "href": "@docsApp"
-      },
-      {
-        "label": "GitHub",
-        "href": "@githubApp"
       }
     ]
   },
