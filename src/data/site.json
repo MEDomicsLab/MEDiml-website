@@ -2,7 +2,7 @@
   "$schema": "./_shared/schemas/site.schema.json",
   "brand": {
     "name": "MEDiml",
-    "version": "0.9.0",
+    "version": "1.0.0",
     "logo": "/images/brand/logo.webp",
     "logoInverse": "/images/brand/logo-white.webp",
     "logoAlt": "MEDiml logo",
