@@ -12,10 +12,13 @@
     "playVideo": "Play video: {title}",
     "partners": "Partners",
     "steps": "Steps",
-    "pauseVideo": "Pause video: {title}"
+    "pauseVideo": "Pause video: {title}",
+    "expandHero": "Expand screenshots",
+    "collapseHero": "Collapse screenshots"
   },
   "copy": "Copy",
   "copied": "Copied",
+  "expand": "Expand!",
   "recommended": "Your system",
   "pdfFallback": "PDF preview",
   "notFound": {
