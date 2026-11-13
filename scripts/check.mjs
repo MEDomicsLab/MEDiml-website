@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
+import { reportDeprecations } from "./deprecations.mjs";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 const data = path.join(root, "src/data");
@@ -25,9 +26,12 @@ for (const name of await fs.readdir(schemas)) {
   if (name.endsWith(".json")) ajv.addSchema(await read(path.join(schemas, name)), name);
 }
 const sectionNames = [];
+const deprecatedSections = [];
 for (const name of await fs.readdir(path.join(schemas, "sections"))) {
-  ajv.addSchema(await read(path.join(schemas, "sections", name)), `sections/${name}`);
-  sectionNames.push(name.replace(/\.schema\.json$/, ""));
+  const schema = await read(path.join(schemas, "sections", name));
+  ajv.addSchema(schema, `sections/${name}`);
+  const names = schema.deprecated ? deprecatedSections : sectionNames;
+  names.push(name.replace(/\.schema\.json$/, ""));
 }
 
 async function validate(file, schema) {
@@ -61,7 +65,7 @@ for (const name of sectionNames) {
   else report(file, "is missing, and the page needs it");
 }
 for (const name of await fs.readdir(sectionDir)) {
-  if (!sectionNames.includes(name.replace(/\.json$/, ""))) {
+  if (![...sectionNames, ...deprecatedSections].includes(name.replace(/\.json$/, ""))) {
     report(path.join(sectionDir, name), `is not used: the page shows ${sectionNames.join(", ")}`);
   }
 }
@@ -100,6 +104,8 @@ for (const entry of local) {
     report(file, `${trail} uses ${asset}, which is missing from public/ (run npm run assets?)`);
   }
 }
+
+await reportDeprecations();
 
 if (problems.length) {
   console.error(`\n${problems.length} problem${problems.length > 1 ? "s" : ""} found:\n`);
