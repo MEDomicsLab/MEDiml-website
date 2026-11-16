@@ -78,8 +78,30 @@
     },
     "scrollExpand": {
       "type": "boolean",
-      "default": false,
-      "description": "Expand a split hero image to the content width while its text slides underneath on scroll. Reverses when scrolling up. Uses the static layout on small screens and with reduced motion."
+      "deprecated": true,
+      "description": "Legacy scroll expansion option. The hero now expands on click and ignores this field."
+    },
+    "expansion": {
+      "type": "object",
+      "description": "Click a split hero image or its label to expand it while its text slides underneath. Large screens only; static with reduced motion.",
+      "properties": {
+        "duration": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "default": 0.6,
+          "description": "Expansion animation duration in seconds."
+        },
+        "label": {
+          "type": "string",
+          "description": "Optional override for the shared label in _shared/ui.json → expand. Omit to use the shared default, or set an empty string to hide both the label and cursor. The label stays centred below the image and switches to the collapse label when expanded. Hidden when expansion is unavailable."
+        },
+        "collapseLabel": {
+          "type": "string",
+          "description": "Optional override for the shared collapse label in _shared/ui.json → collapse."
+        }
+      },
+      "additionalProperties": false,
+      "examples": [{ "duration": 0.6 }, { "label": "View larger" }, { "label": "" }]
     }
   },
   "required": ["title"],

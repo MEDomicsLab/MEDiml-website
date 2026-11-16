@@ -5,7 +5,7 @@
   "text": "Use {name}-pkg as a Python package or install the {name}-app desktop application. No Python knowledge required: enjoy an all-in-one interface for medical image analysis with drag-drop style radiomics analysis.",
   "download": {
     "title": "{name}-app",
-    "release": "v{version}, pre-release",
+    "release": "v{version}",
     "items": [
       {
         "label": "Windows",

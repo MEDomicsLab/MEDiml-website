@@ -17,14 +17,26 @@
         },
         "pauseVideo": {
           "type": "string"
+        },
+        "expandHero": {
+          "type": "string"
+        },
+        "collapseHero": {
+          "type": "string"
         }
       },
-      "required": ["playVideo", "pauseVideo"]
+      "required": ["playVideo", "pauseVideo", "expandHero", "collapseHero"]
     },
     "copy": {
       "type": "string"
     },
     "copied": {
+      "type": "string"
+    },
+    "expand": {
+      "type": "string"
+    },
+    "collapse": {
       "type": "string"
     },
     "recommended": {
@@ -80,6 +92,8 @@
     "a11y",
     "copy",
     "copied",
+    "expand",
+    "collapse",
     "notFound",
     "pdfOpen",
     "pdfFallback",
